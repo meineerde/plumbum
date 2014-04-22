@@ -1,0 +1,12 @@
+AllCops:
+  Include:
+    - Gemfile
+
+# Don't restrict the usage of %r{}
+RegexpLiteral:
+  MaxSlashes: 0
+
+# Global vars are actually rather common
+# The english equivalents are clumsy to use
+SpecialGlobalVars:
+  Enabled: false

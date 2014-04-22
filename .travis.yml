@@ -1,0 +1,19 @@
+language: ruby
+cache: bundler
+
+rvm:
+  - 2.1.1
+  - 2.0
+  - 1.9.3
+
+env:
+  - TASK=test
+  - TASK=rubocop
+
+script:
+  - bundle exec rake $TASK
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - env: TASK=rubocop
